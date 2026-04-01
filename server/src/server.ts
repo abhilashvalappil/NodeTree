@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import http from "http";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
+import nodeRouter from './routes/nodeRoutes';
 
 
 dotenv.config();
@@ -24,6 +25,8 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use('/', nodeRouter);
 
 
 if (process.env.NODE_ENV !== 'test') {
