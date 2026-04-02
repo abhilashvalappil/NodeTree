@@ -12,3 +12,7 @@ export const fetchNodes = async (): Promise<NodeData[]> => {
     const response = await API.get(nodeENDPOINTS.GET_NODE)
     return response.data;
 }
+
+export const deleteNode = async (id: string): Promise<void> => {
+    await API.delete(`${nodeENDPOINTS.DELETE_NODE}/${id}`)
+}

@@ -10,3 +10,10 @@ export interface NodeData {
     parentId: string | null;
     createdAt: Date;
 }
+
+export interface NodeDTO {
+  _id: string;
+  name: string;
+  parentId: string | null;
+  createdAt: Date;
+}

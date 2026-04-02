@@ -10,5 +10,6 @@ const nodeController = new NodeController(nodeService);
 
 nodeRouter.post("/nodes", nodeController.createNode.bind(nodeController));
 nodeRouter.get("/nodes", nodeController.getAllNodes.bind(nodeController));
+nodeRouter.delete("/nodes/:id", nodeController.deleteNode.bind(nodeController));
 
 export default nodeRouter;
